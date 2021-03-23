@@ -22,4 +22,4 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward deployment/$TAG ${LOCAL_PORT}:${DOCKER_PORT}
+kubectl port-forward pod/$TAG ${LOCAL_PORT}:${DOCKER_PORT}
