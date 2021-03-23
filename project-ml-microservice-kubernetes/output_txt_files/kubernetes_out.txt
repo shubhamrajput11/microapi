@@ -1,3 +1,14 @@
+#minikube start
+😄  minikube v1.18.1 on Ubuntu 18.04 (vbox/amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting control plane node minikube in cluster minikube
+🏃  Updating the running docker "minikube" container ...
+🐳  Preparing Kubernetes v1.20.2 on Docker 20.10.3 ...
+❌  Unable to load cached images: loading cached images: stat /home/ubuntu/.minikube/cache/images/docker.io/kubernetesui/metrics-scraper_v1.0.4: no such file or directory
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v4
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
 
 $ ./make_prediction.sh
 Port: 8000
@@ -6,3 +17,10 @@ Port: 8000
     20.35373177134412
   ]
 }
+
+$ ./run_kubernetes.sh
+NAME                     READY   STATUS    RESTARTS   AGE
+development              1/1     Running   0          3h44m
+udacity-boston-housing   1/1     Running   0          27m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
